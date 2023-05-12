@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Monoton&display=swap');
+h1{
+    font-family: 'Montserrat'; 
+    font-size: 36px;
+    font-weight: bolder;
+    color: white; 
+    opacity: 1;
+}
+
+body {
+    background: black;
+    color: #0bf4f3;
+    font-family: 'Montserrat';
+    margin: 0; 
+    padding: 0;
+}
+
+.shine {
+    font-family: 'Comfortaa', cursive;
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+    font-size: 20px;
+}
+.section0 {
+    display: flex;
+    flex-direction: column;
+}
+
+
+    .api-time-test {
+        text-align: center;
+        padding-top: 20px;
+    }
+    .us_map {
+        width: 300px;
+        height: auto;
+        opacity: 0.2;
+        position: absolute;
+    }
+
+    .refresh-icon {
+        position: fixed;
+        right: 10px;
+        top: 5px;
+        cursor: pointer;
+    }
+
+.locale{
+    display: flex;
+    justify-content: center;
+}
+.section1 {
+    display: block;
+}
+
+.input-group {
+    align-self: center;
+    margin-top: 44px;
+}
+.input-group.form-control {
+    width: -webkit-fill-available;
+}
+
+.container-0  {
+    display: inline-flex;
+}
+.contaier-1 {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.tc-card {
+    display: flex;
+}
+
+.btn-city  {  
+    margin: 14px;
+}
+.btn-13 {
+    color: #0bf4f3;
+    box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+    border: 1px solid #0bf4f3;
+    z-index: 1;
+  }
+  .btn-13:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+    transition: all 0.3s ease;
+  }
+
+  .btn-13:hover:after {
+    top: 0;
+    height: 100%;
+  }
+  .btn-13:active {
+    top: 2px;
+
+  }
+  .btn-13:focus{ 
+    color: rgb(255, 52, 221);
+    box-shadow: 0 0 5px rgb(255, 52, 221) , 0 0 5px rgb(255, 52, 221)  inset;
+    border: 1px solid rgb(255, 52, 221);
+    z-index: 1;
+    font-weight: 800;
+  }
+
+.custom-btn {
+    color: #fff;
+    width: 130px;
+    height: 70px;
+    margin-auto;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+  }
+.city-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+  .city-html-box {
+    height: auto;
+    padding: 20px;
+}
+.city-html {
+    background-color: rgb(35, 29, 17);
+    font-size : 24px;
+    text-align: center;
+}
+
+.title{        
+    font-size: 58px;
+    font-family: 'Monoton', cursive;
+}
+.neon {
+    font-family: 'Monoton', cursive;
+        color: #fff;
+        text-align: center;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+}
+.neonText {
+    color: #fff;
+    text-shadow:
+        0 0 7px #a5e8ff,
+        /* 0 0 10px #fff, */
+        0 0 21px #ffffff,
+        /* 0 0 42px #0fa, */
+        /* 0 0 82px #0fa, */
+        /* 0 0 92px #0fa, */
+        0 0 102px rgb(0, 179, 255),
+        0 0 151px rgb(0, 179, 255);
+  }
+
+.section2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    height: max-content;
+    padding-bottom: 100px;
+}
+
+.table{
+    width: 70%;
+    margin: auto;
+}
+.table thead { 
+    height:70px;
+    line-height:70px;
+}
+
+.tbody tr {
+    height: 100px;
+    display: table-row;
+    vertical-align: middle;
+    text-align: center;
+    margin: auto 0;
+}
+
+.sm-text {
+    color:rgb(198, 198, 198)
+}
+.area1 {
+    padding-top: 100px;
+    padding-bottom: 30px;
+    position: top; 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.area2 {
+    background-color: rgb(69, 69, 69);
+    padding: 20px;
+    margin-bottom: 30px;
+    
+}
+
+.my_cities a {
+    text-align: center;
+    font-size: large;
+    flex-wrap: wrap;
+}
+
+.weather_icons {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(237, 78, 192);
+    padding: 40px;
+    margin-top: 5vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    justify-content: space-between;
+}
+
+.sun {
+    color: rgb(219, 239, 0);
+
+}
+.cloud {
+    color: rgb(236, 230, 230);
+
+}
+.cloud-drizzle {
+    color: rgb(236, 230, 230);
+
+}
+.sunrise {
+    color: rgb(245, 207, 112);
+
+}
+.cloud-rain {
+    color: rgb(42, 42, 79);
+
+}
+.sunset {
+    color: rgb(255, 175, 122);
+
+}
+.umbrella {
+    color: rgb(94, 94, 255);
+
+}
+
+.feather-16{
+    width: 16px;
+    height: 16px;
+}
+
+.feather-24{
+    width: 24px;
+    height: 24px;
+}
+
+.feather-32{
+    width: 32px;
+    height: 32px;
+}
+.search-icon {
+    color: white;
+}
+.searched {
+    color: white;
+    font-size: 20px;
+    display: revert; 
+    justify-content: center;
+    margin-top: 24px;
+    text-align: center;
+
+}
+
+.parent {
+    display: flex;
+    margin : 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+.temperature {
+    position: relative;
+    display: inline-flex;
+    justify-content: baseline;
+}
+
+.btn-gradient-1 {
+    border: 1.6px solid transparent;
+    height: 18px;
+    margin-bottom: 12px;
+    border-image: linear-gradient(to right, rgb(4, 173, 175), rgb(158, 204, 50)) 1;
+  }
+  .change-color {
+    color:whitesmoke;
+  }
+  .change-color:hover{
+    color:rgb(52, 255, 231);
+  }
+
+  .btn-texts {
+    background-color: transparent;
+    font-size: x-small;
+    position: relative;
+    display: inline-flex;
+    padding: 0.6rem 0.6rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color:rgb(52, 255, 231)
+  }
+
+.search-icon:hover {
+    color: rgb(52, 255, 231);
+}
+.form-control:focus {
+    background-color:#0bf4f3;
+    animation: blink 1.2s linear infinite;
+}
+@keyframes blink{
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+    }
+
+    #spinner, .flip {
+        font-size: 16px;
+        padding: 15px;
+        text-align: center;
+        background-color: #6ceefa;
+        color: white;
+        border: solid 1px black;
+        margin: auto;
+      }
+      
+      #spinner {
+        display: none;
+      }

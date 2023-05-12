@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Project</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Megrim&family=Pompiere&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Here a loader is created which loads till response comes -->
+    <section class="section0">
+      <div class="d-flex flex-row-reverse d-none">
+        <i data-feather="refresh-cw" class="refresh-icon"></i>
+      </div>
+      <div class="area2 p-2 d-none">
+        <text id="dataArea">Weather API Fetching...</text>
+        <text id="dataTimeZone">Loading Time Zone...</text>
+      </div>
+      <div class="area1 title-1 d-flex row">
+        <span class="title neon shine">The City Time</span>
+        <img
+          src="src/us-map.png"
+          class="us_map col"
+          alt="US Map"
+          usemap="#us-map" />
+        <span class="shine">Always on the clock for the top 5 US cities</span>
+      </div>
+    </section>
+
+    <form class="w-50 m-auto">
+      <div class="searched text-capitalize text-wrap neonText">
+        <p class="locale" id="userLocation"></p>
+        <p class="locale" id="todaysdate"></p>
+      </div>
+      <div class="input-group col-sm-4">
+        <input
+          type="text"
+          onfocus="this.value='';"
+          class="form-control blink"
+          placeholder="Look up city time..."
+          id="search-input" />
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="button" id="search-button">
+            <i class="search-icon feather-32" data-feather="search"></i>
+          </button>
+        </div>
+      </div>
+      <div class="searched text-capitalize text-wrap">
+        <a id="searched"
+          ><div
+            class="spinner-grow text-light mt-3"
+            id="spinner"
+            role="status"></div
+        ></a>
+      </div>
+    </form>
+
+    <section class="section1">
+      <container class="contaier-0">
+        <!-- <div class="city-html-box d-flex p-2">
+          <div>
+            <p id="city_Info" class="city-html"></p>
+          </div>
+        </div> -->
+        <div class="collapse city-html-box" id="collapseExample">
+          <div class="card card-body city-html" id="city_Info">
+            This is some placeholder content.
+          </div>
+        </div>
+        <div class="city-buttons">
+          <!-- <button class="custom-btn btn-13 user-button" id="userState">
+            User Location
+          </button> -->
+          <button
+            type="button"
+            class="btn btn-city custom-btn btn-13 nyc-button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample"
+            aria-expanded="false"
+            aria-controls="collapseExample">
+            New York
+          </button>
+          <button
+            type="button"
+            class="btn btn-city custom-btn btn-13 chi-button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample"
+            aria-expanded="false"
+            aria-controls="collapseExample">
+            Chicago
+          </button>
+          <button
+            type="button"
+            class="btn btn-city custom-btn btn-13 den-button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample"
+            aria-expanded="false"
+            aria-controls="collapseExample">
+            Denver
+          </button>
+          <button
+            type="button"
+            class="btn btn-city custom-btn btn-13 la-button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample"
+            aria-expanded="false"
+            aria-controls="collapseExample">
+            Los Angeles
+          </button>
+          <button
+            type="button"
+            class="btn btn-city custom-btn btn-13 anc-button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample"
+            aria-expanded="false"
+            aria-controls="collapseExample">
+            Anchorage
+          </button>
+          <button
+            id="user-location-btn"
+            type="button"
+            class="btn btn-city custom-btn btn-13 user-button d-none"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample"
+            aria-expanded="false"
+            aria-controls="collapseExample">
+            User Location
+          </button>
+        </div>
+
+        <div class="api-time-test" id="today"></div>
+      </container>
+    </section>
+
+    <section class="section2">
+      <table class="table table-hover table-dark">
+        <thead class="text-center text-uppercase">
+          <tr class="table-row">
+            <th>City</th>
+            <th colspan="2">Weather</th>
+            <th>
+              <div class="parent">
+                <a>Temperature</a>
+                <button
+                  class="btn-texts btn-gradient-1 change-color"
+                  id="update-button">
+                  °F ⟷ °C
+                </button>
+              </div>
+            </th>
+
+            <th>Day</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody class="tbody" id="innerWeather"></tbody>
+      </table>
+
+      <!-- <container class="contaier-1">
+        <div class="tc-card card text-bg-dark text-center">
+          <div class="card-body">
+            <h5 class="card-title">Temperature Converter</h5>
+            <input type="number" id="temperature-input" />
+            <button id="toggle-btn">Convert to Celsius</button>
+            <br /><br />
+            <output id="converted-output"></output>
+            <div class="card-footer card-text">Try this out!</div>
+          </div>
+        </div>
+      </container> -->
+      <!-- <div class="row row-cols-1 row-cols-md-3 g-4" id="inner_mid">
+    </div> -->
+    </section>
+
+    <!-- <script type="module" src="https://js.radar.com/v3/radar.min.js"></script> -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace();
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat" />
+    <script
+      src="https://kit.fontawesome.com/5c3e534f93.js"
+      crossorigin="anonymous"></script>
+    <script
+      type="text/JavaScript"
+      src=" https://MomentJS.com/downloads/moment.js"></script>
+    <script
+      type="text/JavaScript"
+      src="https://MomentJS.com/downloads/moment-with-locales.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
